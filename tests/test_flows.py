@@ -76,3 +76,22 @@ def test_source_upload_and_framework(client):
     assert r.status_code==200 and 'đối chiếu' in r.json()['text']
     assert client.post('/api/extract',files={'file':('empty.txt',b'','text/plain')}).status_code==422
     assert client.post('/api/extract',files={'file':('large.txt',b'x'*3000001,'text/plain')}).status_code==413
+
+def test_private_blob_read_contract(tmp_path,monkeypatch):
+    import uuid,asyncio
+    from types import SimpleNamespace
+    import vercel.blob
+    owner=str(uuid.uuid4());id=str(uuid.uuid4())
+    raw=json.dumps({'id':id,'created_at':'2026-10-07T00:00:00Z'}).encode()
+    class Blob:
+        def __init__(self,token=None):assert token=='test-token'
+        async def get(self,path,**kwargs):
+            assert kwargs['access']=='private' and kwargs['use_cache'] is False
+            return SimpleNamespace(status_code=200,content=raw)
+        async def list_objects(self,**kwargs):
+            assert kwargs['prefix']==f'workspaces/{owner}/documents/'
+            return SimpleNamespace(blobs=[SimpleNamespace(pathname=f'workspaces/{owner}/documents/{id}.json')],has_more=False,cursor=None)
+    monkeypatch.setattr(vercel.blob,'AsyncBlobClient',Blob)
+    store=Store();store.token='test-token'
+    assert asyncio.run(store.get(owner,id))['id']==id
+    assert asyncio.run(store.list(owner))[0]['id']==id

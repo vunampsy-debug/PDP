@@ -27,7 +27,7 @@ class Store:
             try:
                 result=await AsyncBlobClient(token=self.token).get(path,access='private',use_cache=False)
                 if result is None or result.status_code!=200:raise HTTPException(404,'Không tìm thấy tài liệu trong không gian của bạn.')
-                return json.loads(b''.join([chunk async for chunk in result.stream]))
+                return json.loads(result.content)
             except HTTPException:raise
             except Exception:raise HTTPException(503,'Không đọc được kho dữ liệu. Hãy thử lại.')
         elif os.getenv('VERCEL'):raise HTTPException(503,'Kho lưu trữ chưa được cấu hình.')
