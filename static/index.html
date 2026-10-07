@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173b3e"><title>PDP Studio · Từ ý tưởng đến trải nghiệm học tập</title><link rel="stylesheet" href="/static/styles.css"><script defer src="/static/app.js"></script></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="/" aria-label="PDP Studio trang chủ"><span class="brand-mark">p<span>dp</span></span><span>Integration<br><strong>Studio</strong></span></a>
+<div class="nav-label">KHÔNG GIAN THIẾT KẾ</div>
+<nav aria-label="Chế độ thiết kế">
+<button class="nav-item active" data-mode="V4"><span class="nav-icon">✦</span><span>Tạo đề mẫu<small>V4 · Sản phẩm & phản tư</small></span></button>
+<button class="nav-item" data-mode="V1"><span class="nav-icon">▦</span><span>Bảng tham chiếu<small>V1 · Tìm điểm chạm</small></span></button>
+<button class="nav-item" data-mode="V2"><span class="nav-icon">▤</span><span>Kế hoạch bài dạy<small>V2 · Từ bản V1 đã duyệt</small></span></button>
+<button class="nav-item" data-mode="V3"><span class="nav-icon">◈</span><span>Thiết kế dự án<small>V3 · Học qua trải nghiệm</small></span></button>
+</nav>
+<div class="nav-label">TÀI NGUYÊN</div>
+<button class="nav-item" id="library-nav"><span class="nav-icon">▱</span><span>Bản đã lưu</span><span class="nav-count" id="saved-count">0</span></button>
+<button class="nav-item" id="sources-nav"><span class="nav-icon">◎</span><span>Nguồn & khung PDP</span></button>
+<div class="sidebar-bottom"><div class="grade-pill">TOÁN · LỚP 5</div><p>Tính chủ động<br>& tự định hướng</p><div class="connection"><span id="ai-dot"></span><span id="ai-status">Đang kiểm tra kết nối</span></div><small>Không gian được lưu theo trình duyệt. Giữ cookie để mở lại tài liệu.</small></div>
+</aside>
+<main>
+<header class="topbar"><span>PDP / <strong id="crumb">Đề bài mẫu</strong></span><div class="top-actions"><span class="version">STUDIO 2.0</span><button class="button quiet" id="help-button">Hướng dẫn</button></div></header>
+<section class="workspace" id="workspace">
+<div class="page-heading"><div><div class="eyebrow">THIẾT KẾ TRẢI NGHIỆM HỌC TẬP</div><h1 id="page-title">Một đề bài.<br>Nhiều cơ hội trưởng thành.</h1><p id="page-description">Từ yêu cầu môn học đến sản phẩm, minh chứng và nhật ký phản tư.</p></div><button class="button secondary" id="sample-button">Xem đề minh họa <span>↗</span></button></div>
+<div class="steps"><span class="current"><b>1</b> Đặt yêu cầu</span><span class="line"></span><span><b>2</b> Tạo & chỉnh sửa</span><span class="line"></span><span><b>3</b> Rà soát & sử dụng</span></div>
+<div class="studio-grid">
+<form id="design-form" class="form-panel">
+<div class="panel-heading"><div><span class="eyebrow">ĐẦU VÀO</span><h2>Bắt đầu từ bài học</h2></div><span class="pill">INI&SED</span></div>
+<div class="form-body">
+<div class="form-row"><label>Người soạn<input name="author" placeholder="Tên giáo viên" minlength="2" maxlength="80" required autocomplete="name"></label><label>Thời lượng (phút)<input type="number" name="minutes" value="35" min="15" max="240" required></label></div>
+<label>Bài học / chủ đề<input name="lesson" placeholder="Ví dụ: Bài 11 · Làm tròn số thập phân" minlength="3" maxlength="160" required></label>
+<div id="reference-wrap" hidden><label>Bảng V1 đã duyệt<select name="reference_id" id="reference-select"><option value="">Chọn bản tham chiếu</option></select></label><p class="field-hint">V2 giữ bài học, YCCĐ và chỉ báo của bản V1 đã duyệt.</p></div>
+<label>Yêu cầu cần đạt môn học<textarea name="subject_goal" rows="3" minlength="15" maxlength="3000" required placeholder="Học sinh cần biết và làm được gì sau bài học?"></textarea></label>
+<details class="source-input" open><summary>Nguồn đối chiếu YCCĐ <span>Cần bổ sung</span></summary><label>Tên tài liệu & vị trí<input name="source_name" placeholder="Tên tài liệu, trang hoặc mục chứa YCCĐ" minlength="3" maxlength="200" required></label><label>Đoạn nguồn liên quan<textarea name="source_excerpt" rows="3" minlength="30" maxlength="24000" required placeholder="Dán đoạn gốc để giáo viên đối chiếu khi duyệt."></textarea></label><label class="upload-button">↥ Đọc từ PDF / Word / Excel / TXT<input type="file" id="source-file" accept=".pdf,.docx,.xlsx,.txt"></label><p class="field-hint">Tối đa 3 MB. Đoạn bổ sung được lưu cùng bản thiết kế; chưa được xác minh tự động.</p></details>
+<fieldset><legend>Chỉ báo PDP <span>Chọn 1–2</span></legend><div id="indicator-options" class="indicator-options"></div></fieldset>
+<label>Bối cảnh & ý tưởng nhiệm vụ<textarea name="context" rows="4" minlength="15" maxlength="3000" required placeholder="Học sinh giải quyết vấn đề gì? Tạo sản phẩm nào? Có thể tự lập kế hoạch và điều chỉnh ở đâu?"></textarea></label>
+<div class="form-note"><span>✧</span><p>Giữ mục tiêu Toán làm trọng tâm. Nếu chưa có điểm chạm tự nhiên, kết quả có thể đề xuất <strong>Không tích hợp</strong>.</p></div>
+<button class="button primary generate" id="generate-button" type="submit">Tạo bản thiết kế <span>→</span></button>
+<p class="field-hint center">Nội dung AI cần giáo viên rà soát trước khi sử dụng.</p>
+</div></form>
+<section class="preview-panel" aria-label="Bản thiết kế">
+<div class="preview-bar"><span class="eyebrow">BẢN THIẾT KẾ</span><span class="pill draft" id="document-status">Chưa tạo</span></div>
+<div id="empty-preview" class="empty-preview"><div class="paper-illustration"><div class="paper-mini"><span></span><span></span><span></span><b>✦</b></div><span class="floating-note">Ý tưởng → trải nghiệm</span></div><h2>Đề bài bắt đầu từ<br>điều học sinh cần học.</h2><p>Điền yêu cầu bên trái. Studio sẽ đề xuất nhiệm vụ, minh chứng và cách phản tư phù hợp.</p><div class="preview-features"><span>01 <b>Nhiệm vụ rõ ràng</b></span><span>02 <b>Minh chứng đa nguồn</b></span><span>03 <b>Rubric có căn cứ</b></span></div></div>
+<div id="loading-preview" class="loading-preview" hidden><div class="spinner"></div><h2>Đang kết nối ý tưởng của bạn…</h2><p>AI đang xây nhiệm vụ và đối chiếu khung PDP.<br>Quá trình này có thể mất 1–3 phút.</p></div>
+<div id="document-view" hidden></div>
+<div class="document-actions" id="document-actions" hidden><button id="save-button" class="button primary">Lưu phiên bản</button><button id="review-button" class="button secondary">Duyệt bản này</button><div class="export-group"><button class="button quiet" data-export="docx">Word</button><button class="button quiet" data-export="xlsx">Excel</button><button class="button quiet" data-export="pdf">PDF</button></div></div>
+</section>
+</div></section>
+<section class="secondary-page" id="library-page" hidden><div class="eyebrow">KHÔNG GIAN CỦA BẠN</div><h1>Bản đã lưu</h1><p>Mỗi lần chỉnh sửa hoặc duyệt tạo một phiên bản mới. Phiên bản cũ được giữ lại.</p><div class="filter-row"><label>Lọc chế độ<select id="library-filter"><option value="">Tất cả</option><option>V1</option><option>V2</option><option>V3</option><option>V4</option></select></label><button class="button secondary" id="refresh-library">Làm mới</button></div><div id="library-list"></div></section>
+<section class="secondary-page" id="sources-page" hidden><div class="eyebrow">CĂN CỨ THIẾT KẾ</div><h1>Nguồn & khung PDP</h1><p>Khung chỉ báo và rubric được lấy từ gói tài liệu bạn cung cấp. Bài mẫu tham khảo không được coi là chuẩn chương trình.</p><div class="notice warning">SGK Toán 5 và CTGDPT 2018 trong gói cũ chưa có đoạn văn bản trích xuất. Hãy bổ sung nguồn YCCĐ trong mỗi bản thiết kế để người duyệt đối chiếu.</div><div id="source-list"></div><h2>9 chỉ báo · Rubric lớp 5</h2><p>Mô tả 4 mức được giữ nguyên từ bảng gốc. Dùng nhiều bằng chứng và biểu hiện ổn định để nhận định; không suy từ một lần làm bài.</p><div id="rubric-list"></div></section>
+<footer>Thiết kế có chủ đích. Học tập qua trải nghiệm. <span>PDP Integration Studio</span></footer>
+</main></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<dialog id="review-dialog"><form id="review-form"><div class="dialog-heading"><h2>Duyệt bản thiết kế</h2><button type="button" class="icon-button" data-close="review-dialog" aria-label="Đóng">×</button></div><p>Chỉ người có mã duyệt của quản lý mới được xác nhận bản này.</p><label>Người duyệt<input name="reviewer" required minlength="2" maxlength="80"></label><label>Mã duyệt<input name="code" type="password" required autocomplete="off"></label><label>Nhận xét / điều chỉnh đã kiểm tra<textarea name="note" required minlength="10" maxlength="2000" rows="3"></textarea></label><label class="check-label"><input type="checkbox" name="source_confirmed" required><span>Tôi đã đối chiếu YCCĐ với nguồn gốc, kiểm tra tính đúng của Toán, điểm chạm PDP và minh chứng.</span></label><p class="field-hint">Tên người duyệt được khai báo; mã duyệt xác nhận quyền, chưa xác thực danh tính cá nhân.</p><button class="button primary" type="submit">Xác nhận đã duyệt</button></form></dialog>
+<dialog id="help-dialog"><div class="dialog-heading"><h2>Từ yêu cầu đến đề bài</h2><button class="icon-button" data-close="help-dialog" aria-label="Đóng">×</button></div><ol><li><strong>Đặt yêu cầu:</strong> nhập YCCĐ, nguồn đối chiếu và bối cảnh; chọn 1–2 chỉ báo.</li><li><strong>Tạo & chỉnh sửa:</strong> đọc từng phần, điều chỉnh câu chữ trực tiếp. Rubric gốc luôn được giữ riêng.</li><li><strong>Lưu & duyệt:</strong> lưu phiên bản, kiểm tra nội dung rồi dùng mã quản lý để duyệt. Tải Word, Excel hoặc PDF.</li></ol><p>V1 tạo tham chiếu cho một bài; V2 dùng V1 đã duyệt; V3 thiết kế dự án; V4 tạo đề mẫu kèm nhật ký phản tư.</p><p>V4 là phương án phát triển mới từ tiêu đề trong tài liệu, cần được nhà trường rà soát chuyên môn.</p><p>Không gian gắn với cookie trình duyệt. Xuất tài liệu để có bản sao; chưa đồng bộ qua tài khoản cá nhân.</p></dialog>
+</body></html>

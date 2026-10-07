@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "mode": "V4",
+    "author": "Giáo viên minh họa",
+    "lesson": "Bài 11 · Làm tròn số thập phân",
+    "subject_goal": "Làm tròn được số thập phân đến số tự nhiên gần nhất, hàng phần mười và hàng phần trăm.",
+    "source_name": "YCCĐ minh họa do giáo viên nhập · cần đối chiếu CTGDPT/SGK",
+    "source_excerpt": "Ví dụ nội dung YCCĐ: Làm tròn số thập phân theo độ chính xác yêu cầu. Đây là đoạn minh họa, không phải trích dẫn đã xác minh từ CTGDPT hoặc SGK.",
+    "context": "Lập kế hoạch mua vật liệu cho góc đọc sách. Giải thích vì sao lựa chọn cách làm tròn khác nhau trong từng tình huống.",
+    "minutes": 35,
+    "indicators": [
+      "5.INI&SED-01.2",
+      "5.INI&SED-02.4"
+    ],
+    "reference_id": ""
+  },
+  "content": {
+    "title": "Góc đọc sách của chúng mình",
+    "integration": "Tích hợp",
+    "rationale": "Khi ước lượng chiều dài và chi phí, học sinh cần lập kế hoạch tính toán, kiểm tra cách làm tròn và điều chỉnh phương án theo mục đích sử dụng.",
+    "sections": [
+      {
+        "heading": "01 · Nhiệm vụ dành cho em",
+        "content": "Lớp muốn trang trí góc đọc sách. Em có 35 phút để đề xuất một kế hoạch mua dây trang trí và vải phủ bàn. Làm việc theo cặp, nhưng mỗi bạn giữ một bản kế hoạch và nhật ký riêng. Em cần giải thích cách làm tròn, không chỉ ghi kết quả."
+      },
+      {
+        "heading": "02 · Dữ kiện & sản phẩm",
+        "content": "Cần 4 đoạn dây, mỗi đoạn dài 1,26 m; giá dây 12.500 đồng/m. Một tấm vải dài 2,345 m.\nA. Tính tổng chiều dài dây và chi phí chính xác.\nB. Ước lượng chiều dài dây đến mét gần nhất để dự trù.\nC. Làm tròn chiều dài vải đến hàng phần trăm khi ghi vào bảng đo.\nSản phẩm: một tờ đề xuất gồm kết quả, cách tính, giải thích và dấu vết chỉnh sửa. Khi mua, kiểm tra lại chiều dài thực tế: số đã làm tròn để ước lượng không bảo đảm đủ vật liệu."
+      },
+      {
+        "heading": "03 · Kế hoạch & mốc kiểm tra",
+        "content": "0–5 phút: đọc dữ kiện, tự viết mục tiêu và chia công việc.\n5–15 phút: tính toán, ghi cách làm và dự kiến kết quả.\n15–25 phút: dùng bảng kiểm xác nhận hàng làm tròn, so sánh với kết quả chính xác; ghi một điều đã sửa hoặc giữ nguyên và lý do.\n25–35 phút: hoàn thiện sản phẩm, trao đổi với bạn và phản tư."
+      },
+      {
+        "heading": "04 · Hướng dẫn quan sát cho giáo viên",
+        "content": "INI&SED-01.2: quan sát học sinh có tự chia nhiệm vụ, sắp thứ tự và đặt mốc kiểm tra hay không. Ghi mức hỗ trợ thực tế.\nINI&SED-02.4: quan sát việc đối chiếu kết quả, nhận diện chỗ chưa phù hợp và sửa cách làm. Yêu cầu chỉ ra dấu vết trên sản phẩm.\nĐối chiếu kế hoạch cá nhân, sản phẩm và quan sát. Không đánh giá năng lực chỉ từ phép tính đúng hoặc lời tự nhận của học sinh."
+      },
+      {
+        "heading": "05 · Gợi ý đối chiếu Toán & phân hóa",
+        "content": "4 × 1,26 = 5,04 m. Chi phí dây: 5,04 × 12.500 = 63.000 đồng. 5,04 m làm tròn đến mét gần nhất là 5 m; 2,345 m làm tròn đến hàng phần trăm là 2,35 m. Cần nhấn mạnh 5 m là số ước lượng, ít hơn 5,04 m nên không dùng làm số lượng mua đủ.\nHỗ trợ: cung cấp bảng hàng của số thập phân hoặc một câu hỏi gợi mở. Không phạt việc tìm hỗ trợ hợp lý.\nMở rộng: học sinh đề xuất lượng dây có dự phòng và giải thích lựa chọn, giữ riêng kết quả chính xác với số ước lượng."
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "Kế hoạch",
+        "description": "Bản kế hoạch cá nhân có thứ tự công việc, thời lượng và mốc kiểm tra.",
+        "method": "Thu bản kế hoạch đầu giờ và bản có điều chỉnh cuối giờ; đối chiếu hai phiên bản."
+      },
+      {
+        "kind": "Quan sát",
+        "description": "Ghi chú hành vi tự kiểm tra và điều chỉnh khi làm tròn số thập phân.",
+        "method": "GV quan sát ở mốc phút 15–25, ghi hành vi cụ thể và mức hỗ trợ."
+      },
+      {
+        "kind": "Sản phẩm",
+        "description": "Tờ đề xuất có phép tính, lý do làm tròn và dấu vết sửa.",
+        "method": "Đối chiếu kết quả Toán và dấu vết với ghi chú quan sát; trao đổi ngắn khi chưa rõ."
+      }
+    ],
+    "reflection_before": "Em muốn hoàn thành điều gì? Em sẽ làm các bước theo thứ tự nào và kiểm tra vào lúc nào?",
+    "reflection_during": "Kết quả nào khiến em cần kiểm tra lại? Em đã so sánh, sửa hoặc giữ cách làm như thế nào? Ghi một ví dụ cụ thể.",
+    "reflection_after": "Kế hoạch ban đầu có phù hợp không? Minh chứng nào cho thấy em đã tự điều chỉnh? Lần sau em sẽ thay đổi bước nào?",
+    "reference_rows": []
+  }
+}

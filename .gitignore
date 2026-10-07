@@ -1,5 +1,8 @@
-.env
-.venv/
+.env*
+.local-data/
 __pycache__/
+.pytest_cache/
 *.pyc
-.vercel/
+data/corpus.jsonl
+data/rubrics.json
+data/manifest.json
